@@ -10,7 +10,7 @@ var Entry = require("../models/entry").Entry;
 //   //res.render('index', { title: 'Whisper' });
 // });
 
-router.post('/', function(req, res, next){
+router.post('/add', function(req, res, next){
   var entry = new Entry(req.body);
   entry.save(function(err, post){
     if(err) return next(err);
@@ -25,7 +25,7 @@ router.get('/', function(req,res,next){
       Entry.find({}, null, function(err, entries){
         if(err) return next(err);
         if (count > 0){
-          res.render('entries', {title: 'Entries', entries:entries});
+          res.render('index', {title: 'Entries', entries:entries});
         } else {
           res.send("Sorry, there aren't any posts!");
         }
@@ -34,7 +34,7 @@ router.get('/', function(req,res,next){
 });
 
 router.get('/add', function(req,res,next){
-  res.render('index', { title: 'Whisper' });
+  res.render('add-entry', { title: 'Add an Entry' });
 });
 
 module.exports = router;
