@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h6
+    a(href="/") <- Back
+  div(class="entries")
+    h2 #{entry.entryTitle}
+    h3 By #{entry.author}
+    h6 #{entry.date}
+    p #{entry.entryBody}
+
+    p
+      a(href="/#{entry._id}/update") Edit
+      a(href="/#{entry._id}/delete") Delete
