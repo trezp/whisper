@@ -1,0 +1,14 @@
+extends layout
+
+block content
+
+  each entry in entries
+    div(class="entries")
+      h2 #{entry.entryTitle}
+      h3 By #{entry.author}
+      h6 #{entry.date}
+      p #{entry.entryBody}
+
+      p
+        a(href="/update") Edit
+        a(href="/delete") Delete
