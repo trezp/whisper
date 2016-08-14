@@ -11,4 +11,6 @@ block content
 
     p
       a(href="/#{entry._id}/update") Edit
-      a(href="/#{entry._id}/delete") Delete
+      //- form(method='DELETE', action='/#{entry._id}/delete')
+      //-   button(type='submit')Delete
+    a(href="/entry/#{entry._id}") Delete

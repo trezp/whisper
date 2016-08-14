@@ -5,16 +5,6 @@ var router = express.Router();
 var Entry = require("../models/entry").Entry;
 var ObjectId = require('mongodb').ObjectID;
 
-/* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('entries', {title: 'Entries', entries:entries})
-//   //res.render('index', { title: 'Whisper' });
-// });
-
-// router.param('id', function(req,res,next,id){
-//   var id = req.params.id;
-//   next();
-// });
 
 //GET /
 router.get('/', function(req,res,next){
@@ -30,15 +20,23 @@ router.get('/', function(req,res,next){
     });
 });
 
-//DELETE /
+//GET entry/:id
 router.get('/entry/:id', function(req, res, next){
-  var id = req.params.id;
-  Entry.findOne({_id: ObjectId(id)}, function(err, entry){
+  Entry.findOne({_id: ObjectId(req.params.id)}, function(err, entry){
     if(err) return next(err);
     console.log(entry.entryTitle);
     res.render('entry', {title: req.params.entryTitle, entry:entry});
   });
 });
+
+//DELETE entry/:id
+router.get('/entry/:id', function(req, res, next){
+  Entry.findByIdAndRemove(req.params.id, function(err, entry){
+    if(err) return next(err);
+    res.redirect('/');
+  });
+});
+
 
 //POST /add
 router.post('/add', function(req, res, next){
