@@ -30,7 +30,7 @@ router.get('/entry/:id', function(req, res, next){
 });
 
 //DELETE entry/:id
-router.get('/entry/:id', function(req, res, next){
+router.post('/entry/:id/delete', function(req, res, next){
   Entry.findByIdAndRemove(req.params.id, function(err, entry){
     if(err) return next(err);
     res.redirect('/');

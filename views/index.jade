@@ -10,8 +10,9 @@ block content
       p #{entry.entryBody}
 
       p
-        a(href='/entry/#{entry._id}') Read More
+        a(href='/entry/#{entry._id}' id='readmore') Read More
         a(href='/entry/#{entry._id}') Edit
-        a(href="/entry/#{entry._id}") Delete
-        //- form(method='DELETE', action='/#{entry._id}')
-        //-   button(type='submit') Delete
+        form(action='/entry/#{entry._id}/delete',method='post' class="destroy")
+          input(type="hidden" name="_method" value="delete")
+          button(type='submit') Delete
+        //a(href="/entry/#{entry._id}/delete" id="delete") Delete
