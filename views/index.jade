@@ -11,7 +11,7 @@ block content
 
       p
         a(href='/entry/#{entry._id}' id='readmore') Read More
-        a(href='/entry/#{entry._id}') Edit
+        a(href='/entry/#{entry._id}/edit') Edit
         form(action='/entry/#{entry._id}/delete',method='post' class="destroy")
           input(type="hidden" name="_method" value="delete")
           button(type='submit') Delete

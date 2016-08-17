@@ -1,0 +1,12 @@
+extends layout
+
+block content
+
+  form(method="post" id="main" action="/entry/#{entry._id}/edit")
+    label(for="author") Author
+      input(type="text" name="author" value='#{entry.author}')
+    label(for="title") Title
+      input(type="text" name="entryTitle" value="#{entry.entryTitle}")
+    label(for="message") Entry
+      textarea(type="text" name="entryBody" value="") #{entry.entryBody}
+    button(type="submit" class="submit") Submit

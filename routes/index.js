@@ -24,7 +24,6 @@ router.get('/', function(req,res,next){
 router.get('/entry/:id', function(req, res, next){
   Entry.findOne({_id: ObjectId(req.params.id)}, function(err, entry){
     if(err) return next(err);
-    console.log(entry.entryTitle);
     res.render('entry', {title: req.params.entryTitle, entry:entry});
   });
 });
@@ -37,6 +36,24 @@ router.post('/entry/:id/delete', function(req, res, next){
   });
 });
 
+router.get('/entry/:id/edit', function(req, res, next){
+  Entry.findOne({_id: ObjectId(req.params.id)}, function(err, entry){
+    if(err) return next(err);
+      res.render('update-entry', {title: req.params.entryTitle, entry:entry});
+  });
+});
+
+router.post('/entry/:id/edit', function(req, res, next){
+  Entry.findOne({_id: ObjectId(req.params.id)}, function(err, entry){
+    if(err) return next(err);
+    entry.author = req.body.author;
+    entry.entryTitle = req.body.entryTitle;
+    entry.entryBody = req.body.entryBody;
+    entry.save();
+    res.status(201);
+    res.redirect('/')
+  });
+});
 
 //POST /add
 router.post('/add', function(req, res, next){
