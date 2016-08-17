@@ -6,11 +6,14 @@ var Entry = require("../models/entry").Entry;
 var ObjectId = require('mongodb').ObjectID;
 
 
+
 //GET /
 router.get('/', function(req,res,next){
     Entry.count({}, function(err, count){
       Entry.find({}, null, function(err, entries){
         if(err) return next(err);
+      })
+      .sort('-date').exec(function(err, entries){
         if (count > 0){
           res.render('index', {title: 'Entries', entries:entries});
         } else {
@@ -19,6 +22,23 @@ router.get('/', function(req,res,next){
       });
     });
 });
+
+// get /oldest-newest
+router.get('/oldest-newest', function(req,res,next){
+    Entry.count({}, function(err, count){
+      Entry.find({}, null, function(err, entries){
+        if(err) return next(err);
+      })
+      .sort('date').exec(function(err, entries){
+        if (count > 0){
+          res.render('index', {title: 'Entries', entries:entries});
+        } else {
+          res.send("Sorry, there aren't any posts!");
+        }
+      });
+    });
+});
+
 
 //GET entry/:id
 router.get('/entry/:id', function(req, res, next){
