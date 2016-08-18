@@ -4,15 +4,17 @@ block content
 
   each entry in entries
     div(class="entries")
+      h6 #{entry.date}
       h2 #{entry.entryTitle}
       h3 By #{entry.author}
-      h6 #{entry.date}
       p #{entry.entryBody}
 
-      p
-        a(href='/entry/#{entry._id}' id='readmore') Read More
-        a(href='/entry/#{entry._id}/edit') Edit
-        form(action='/entry/#{entry._id}/delete',method='post' class="destroy")
-          input(type="hidden" name="_method" value="delete")
-          button(type='submit') Delete
-        //a(href="/entry/#{entry._id}/delete" id="delete") Delete
+      ul.options
+        //- li
+        //-   a(class=" " href='/entry/#{entry._id}' id='readmore') Read More
+        li
+          a(class="edit" href='/entry/#{entry._id}/edit') Edit
+        li
+          form(action='/entry/#{entry._id}/delete',method='post' class="destroy")
+            input(type="hidden" name="_method" value="delete")
+            button(class="submit" type='submit') Delete

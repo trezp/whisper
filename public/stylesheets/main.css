@@ -1,3 +1,64 @@
+body {
+  background-color: #778899;
+}
+
+ul {
+  padding-left: 0;
+}
+ul li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:visited {
+  color: #000;
+}
+a:hover {
+  color: #000;
+  background-color: black;
+}
+
+form {
+  max-width: 80%;
+}
+form input, form textarea {
+  white-space: pre;
+  border-style: none;
+  width: 100%;
+  line-height: 2em;
+  border: solid 1px black;
+  border-radius: 3px;
+  padding: 5px;
+}
+form label {
+  font-size: 1.1em;
+  display: block;
+  padding: 2% 0 1% 0;
+  font-weight: bold;
+}
+
+.submit, .cancel, .delete, .edit {
+  display: inline-block;
+  width: 150px;
+  background: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  text-align: center;
+}
+.submit:hover, .cancel:hover, .delete:hover, .edit:hover {
+  color: white;
+  background-color: black;
+}
+.submit:visited, .cancel:visited, .delete:visited, .edit:visited {
+  color: #000;
+}
+
 .container {
   background-color: white;
 }
@@ -5,7 +66,7 @@
   padding: 2%;
 }
 .container .sidebar {
-  width: 18%;
+  width: 15%;
   display: block;
   float: left;
 }
@@ -13,41 +74,67 @@
   font-size: 1.3em;
 }
 .container .main {
-  width: 74%;
+  width: 77%;
   float: right;
   display: block;
 }
 
-ul {
-  padding-left: 0;
+ul.main-menu {
   margin: auto;
 }
-ul li {
-  list-style-type: none;
+ul.main-menu li {
   height: 2em;
   line-height: 2em;
   margin-bottom: 10px;
 }
-ul li a {
-  text-decoration: none;
+ul.main-menu li a {
   display: block;
   text-align: center;
-  height: 100%;
-  width: 100%;
-  border: 2px solid black;
-  color: black;
-  border-radius: 4px;
 }
-ul li a:hover {
+ul.main-menu li a:hover {
   background-color: orange;
 }
 
 .header {
+  background-image: url("../images/abstract.jpg");
+  background-position: center;
   padding-left: 2%;
+  background-size: cover;
+  height: 40vh;
 }
 .header h1 {
-  font-size: 3em;
+  color: white;
+  line-height: 40vh;
+  margin: 0 auto;
+  font-size: 6em;
+  text-align: center;
+  letter-spacing: 20px;
+}
+
+.entries {
+  background-color: white;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.entries h2 {
+  font-size: 1.8em;
+  margin: .6em;
+  margin-left: 0;
+}
+.entries h6 {
+  margin: 0;
+}
+
+ul.options {
   margin-bottom: 0;
+}
+ul.options li {
+  display: inline-block;
+}
+ul.options li a:hover {
+  color: #FFF;
 }
 
 /*# sourceMappingURL=main.css.map */

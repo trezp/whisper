@@ -1,6 +1,73 @@
+//global styles and mixins
 body {
-
+  background-color: #778899;
 }
+ul {
+  padding-left: 0;
+  li {
+    list-style-type: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+
+  &:visited {
+    color: #000;
+  }
+
+  &:hover {
+    color: #000;
+    background-color: black;
+  }
+}
+
+@mixin global-button {
+  display: inline-block;
+  width: 150px;
+  background: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  text-align: center;
+
+  &:hover {
+    color: white;
+    background-color: black;
+  }
+
+  &:visited {
+    color: #000;
+  }
+}
+
+form {
+  max-width: 80%;
+  input, textarea {
+    white-space: pre;
+    border-style: none;
+    width: 100%;
+    line-height: 2em;
+    border: solid 1px black;
+    border-radius: 3px;
+    padding: 5px;
+  }
+  label {
+    font-size: 1.1em;
+    display: block;
+    padding: 2% 0 1% 0;
+    font-weight: bold;
+  }
+}
+
+.submit, .cancel, .delete, .edit {
+  @include global-button;
+}
+
+//structure
 .container {
   background-color: white;
 
@@ -9,7 +76,7 @@ body {
   }
 
   .sidebar {
-    width: 18%;
+    width: 15%;
     display: block;
     float: left;
 
@@ -18,33 +85,22 @@ body {
     }
   }
   .main {
-    width: 74%;
+    width: 77%;
     float: right;
     display: block;
   }
 }
 
-ul {
-  padding-left: 0;
+ul.main-menu {
   margin: auto;
   li {
-    list-style-type: none;
-    // display: inline-block;
-    // width: 19%;
-    // margin: .4%;
     height: 2em;
     line-height: 2em;
     margin-bottom: 10px;
 
     a {
-      text-decoration: none;
       display: block;
       text-align: center;
-      height: 100%;
-      width: 100%;
-      border: 2px solid black;
-      color: black;
-      border-radius: 4px;
 
       &:hover {
         background-color: orange;
@@ -53,10 +109,50 @@ ul {
   }
 }
 
+//header
 .header {
+  background-image: url('../images/abstract.jpg');
+  background-position: center;
   padding-left: 2%;
+  background-size: cover;
+  height: 40vh;
+
   h1 {
-    font-size: 3em;
-    margin-bottom: 0;
+    color: white;
+    line-height: 40vh;
+    margin: 0 auto;
+    font-size: 6em;
+    text-align: center;
+    letter-spacing: 20px;
+  }
+}
+
+//entry styles
+.entries {
+  background-color: white;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin-bottom: 15px;
+
+  h2 {
+    font-size: 1.8em;
+    margin: .6em;
+    margin-left: 0;
+  }
+  h6 {
+    margin: 0;
+  }
+}
+ul.options {
+  margin-bottom: 0;
+  li {
+    display: inline-block;
+
+    a {
+      &:hover {
+        color: #FFF;
+      }
+    }
   }
 }
