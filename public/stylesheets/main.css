@@ -1,5 +1,5 @@
 body {
-  background-color: #778899;
+  background-color: #a20025;
 }
 
 ul {
@@ -96,7 +96,7 @@ ul.main-menu li a:hover {
 }
 
 .header {
-  background-image: url("../images/abstract.jpg");
+  background-color: black;
   background-position: center;
   padding-left: 2%;
   background-size: cover;
@@ -122,6 +122,9 @@ ul.main-menu li a:hover {
   font-size: 1.8em;
   margin: .6em;
   margin-left: 0;
+}
+.entries h3 {
+  color: #a20025;
 }
 .entries h6 {
   margin: 0;

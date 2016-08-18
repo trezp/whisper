@@ -1,6 +1,6 @@
 //global styles and mixins
 body {
-  background-color: #778899;
+  background-color: #a20025;
 }
 ul {
   padding-left: 0;
@@ -111,7 +111,8 @@ ul.main-menu {
 
 //header
 .header {
-  background-image: url('../images/abstract.jpg');
+  //background-image: url('../images/abstract.jpg');
+  background-color: black;
   background-position: center;
   padding-left: 2%;
   background-size: cover;
@@ -139,6 +140,9 @@ ul.main-menu {
     font-size: 1.8em;
     margin: .6em;
     margin-left: 0;
+  }
+  h3 {
+    color: #a20025;
   }
   h6 {
     margin: 0;
