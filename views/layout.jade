@@ -3,23 +3,28 @@ html
   head
     title= title
     link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css')
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/main.css')
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
     script(src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js')
     script(src='/javascripts/main.js')
   body
-    h1 Whisper
-    h2 The empire's most amazing wiki
-    ul(class="main-menu")
-      li
-        a(href="/") View All
-      li
-        a(href="/add") Add
-      li
-        a(href="/oldest-newest") Oldest > Newest
-      li
-        a(href="/") Newest > Oldest
-      li
-        a(href="#") Starred posts
+    div(class='container')
+      div(class='header')
+        h1 Whisper
 
-    block content
+      div(class='sidebar')
+        h2 This is the sidebar
+        ul(class="main-menu")
+          li
+            a(href="/") View All
+          li
+            a(href="/add") Write New
+          li
+            a(href="/") Newest
+          li
+            a(href="/oldest-newest") Oldest
+          li
+            a(href="#") Favorites
+      div(class='main')
+        h2 This is the main area.
+        block content

@@ -1,0 +1,53 @@
+.container {
+  background-color: white;
+}
+.container .sidebar, .container .main {
+  padding: 2%;
+}
+.container .sidebar {
+  width: 18%;
+  display: block;
+  float: left;
+}
+.container .sidebar h2 {
+  font-size: 1.3em;
+}
+.container .main {
+  width: 74%;
+  float: right;
+  display: block;
+}
+
+ul {
+  padding-left: 0;
+  margin: auto;
+}
+ul li {
+  list-style-type: none;
+  height: 2em;
+  line-height: 2em;
+  margin-bottom: 10px;
+}
+ul li a {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  border: 2px solid black;
+  color: black;
+  border-radius: 4px;
+}
+ul li a:hover {
+  background-color: orange;
+}
+
+.header {
+  padding-left: 2%;
+}
+.header h1 {
+  font-size: 3em;
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
