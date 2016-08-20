@@ -9,10 +9,11 @@ block content
     h6 #{entry.date}
     p #{entry.entryBody}
 
-    p
-      a(href="/#{entry._id}/update") Edit
-      //- form(method='DELETE', action='/#{entry._id}/delete')
-      //-   button(type='submit')Delete
-      //- form(action='/entry/#{entry._id}',method='post')
-      //-     button(type='submit') Delete
-    a(href="/entry/#{entry._id}/delete") Delete
+    ul.options
+      li
+        button(class="edit")
+          a(href='/entry/#{entry._id}/edit') Edit
+      li
+        form(action='/entry/#{entry._id}/delete',method='post' class="destroy")
+          input(type="hidden" name="_method" value="delete")
+          button(class="submit" type='submit') Delete

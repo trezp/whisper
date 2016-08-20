@@ -6,15 +6,17 @@ $(document).ready(function(){
   });
 
   $('.entry-body').each(function(){
-    var desiredPostLength = 300;
+    var desiredPostLength = 250;
     var contentLength = $(this).text().length;
-    $('.read-more').hide();
+    $(this).next('a').hide();
     if (contentLength > desiredPostLength) {
-      $(this).css("color", "blue")
-      $(this).find('a').show();
-      $(this).text().substr(desiredPostLength, contentLength);
+      $(this).next('a').show();
+      $(this).text(function(){
+        return $(this).text().substr(0, desiredPostLength) + "...";
+      });
+
     }
-  })
+  });
 
 
 });

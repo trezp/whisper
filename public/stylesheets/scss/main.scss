@@ -1,26 +1,24 @@
 //global styles and mixins
+
+$theme-color: #a20025;
+$secondary-color: orange;
 body {
-  background-color: #a20025;
+  background-color: $theme-color;
   font-family: 'Hind Guntur', sans-serif;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+
+  &:visited {
+    color: #000;
+  }
 }
 ul {
   padding-left: 0;
   li {
     list-style-type: none;
-  }
-}
-
-a {
-  text-decoration: none;
-  color: #000;
-
-  &:visited {
-    color: #000;
-  }
-
-  &:hover {
-    color: #000;
-    background-color: black;
   }
 }
 
@@ -140,6 +138,18 @@ ul.main-menu {
   border: 3px solid black;
   border-radius: 4px;
   margin-bottom: 15px;
+
+  a {
+    color: $theme-color;
+
+    &:visited {
+      color: $theme-color;
+    }
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
 
   h2 {
     font-size: 1.8em;
