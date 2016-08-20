@@ -2,12 +2,15 @@
 
 ul(class="main-menu")
   li
-    a(href="/add") New Entry
+    a(href="/add")
+      |  <i class="material-icons">add_circle_outline</i> <span>New Entry</span>
   li
-    a(href="/") View All
+    a(href="/")
+      |  <i class="material-icons">list</i> <span>View All</span>
 
-h3 Recent Posts
+h3
+  |  <i class="material-icons">alarm</i> <span>Recent Posts</span>
 each entry in entries
-  ul
+  ul(class="sidebar-entries")
     li
       a(href="/entry/#{entry._id}") #{entry.entryTitle}

@@ -1,5 +1,7 @@
 form {
-  max-width: 80%;
+  .form {
+    max-width: 80%;
+  }
   input, textarea {
     white-space: pre;
     border-style: none;
@@ -19,4 +21,13 @@ form {
 
 .submit, .cancel, .delete, .edit {
   @include global-button;
+
+  a {
+    color: initial;
+    display: block;
+
+    &:hover {
+      color: #FFF;
+    }
+  }
 }

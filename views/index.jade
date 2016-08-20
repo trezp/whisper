@@ -7,7 +7,8 @@ block content
     each entry in entries
       div(class="entries")
         h6 #{entry.date}
-        h2 #{entry.entryTitle}
+        h2
+          a(href="/entry/#{entry._id}") #{entry.entryTitle}
         h3 By #{entry.author}
         p(class="entry-body") #{entry.entryBody}
         a(href="/entry/#{entry._id}") Read More
@@ -15,8 +16,11 @@ block content
         ul.options
           li
             button(class="edit")
-              a(href='/entry/#{entry._id}/edit') Edit
+              a(href='/entry/#{entry._id}/edit')
+                |  <i class="material-icons">edit</i> <span>Edit</span>
           li
-            form(action='/entry/#{entry._id}/delete',method='post' class="destroy")
+            form(action='/entry/#{entry._id}/delete',method='post' class="destroy form")
               input(type="hidden" name="_method" value="delete")
-              button(class="submit" type='submit') Delete
+              button(class="submit" type='submit')
+                i(class="material-icons") delete
+                span Delete

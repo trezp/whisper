@@ -6,45 +6,59 @@
   border-radius: 4px;
   margin-bottom: 15px;
 
-  a {
-    color: $theme-color;
-
-    &:visited {
-      color: $theme-color;
-    }
+  a, button, .edit {
+    color: #000;
 
     &:hover {
-      color: $secondary-color;
+      color: $theme-color;
     }
   }
-
   h2 {
     font-size: 1.8em;
     margin: .6em;
     margin-left: 0;
-    color: #a20025;
+
+    a {
+      color: $theme-color;
+    }
+
   }
 
   h6 {
     margin: 0;
   }
 }
+
+.main-single-entry {
+  max-width: 80%;
+  margin: auto;
+
+  h6 {
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+   button {
+     @include single-entry-global-btn;
+     padding: 5px;
+
+     &:hover {
+       background-color: #000;
+       color: #FFF;
+     }
+
+     a {
+       &:hover {
+         color: #fff;
+       }
+     }
+   }
+
+}
+
 ul.options {
   margin-bottom: 0;
 
   li {
     display: inline-block;
-
-    a {
-      &:hover {
-        color: #FFF;
-      }
-    }
   }
-}
-
-
-.main-single-entry {
-  max-width: 80%;
-  margin: auto;
 }

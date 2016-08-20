@@ -1,6 +1,6 @@
 //structure
 .container {
-  background-color: white;
+  background-color: #FFF;
 
   .sidebar, .main {
     padding: 2%;
@@ -19,26 +19,6 @@
     width: 77%;
     float: right;
     display: block;
-  }
-}
-
-ul.main-menu {
-  margin: auto;
-  li {
-    height: 2em;
-    line-height: 2em;
-    margin-bottom: 10px;
-
-    a {
-      display: block;
-      text-align: center;
-      text-transform: uppercase;
-      font-weight: bold;
-
-      &:hover {
-        background-color: orange;
-      }
-    }
   }
 }
 

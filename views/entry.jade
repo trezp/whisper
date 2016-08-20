@@ -3,7 +3,8 @@ extends layout
 block content
   div(class="main-single-entry")
     h6
-      a(href="/") <- Back
+      a(href="/")
+        |  <i class="material-icons">assignment_return</i> <span>Back</span>
     div(class="entries")
       h2 #{entry.entryTitle}
       h3 By #{entry.author}
@@ -13,8 +14,12 @@ block content
       ul.options
         li
           button(class="edit")
-            a(href='/entry/#{entry._id}/edit') Edit
+            a(href='/entry/#{entry._id}/edit')
+            |  <i class="material-icons">edit</i> <span>Edit</span>
+
+
         li
           form(action='/entry/#{entry._id}/delete',method='post' class="destroy")
             input(type="hidden" name="_method" value="delete")
-            button(class="submit" type='submit') Delete
+            button(class="submit" type='submit')
+              |  <i class="material-icons">delete</i> <span>Delete</span>

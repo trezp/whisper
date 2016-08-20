@@ -1,0 +1,30 @@
+
+ul.main-menu {
+  margin: auto;
+  li {
+    height: 2em;
+    line-height: 2em;
+
+    a {
+      display: block;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      &:hover {
+        background-color: orange;
+      }
+    }
+  }
+}
+
+ul.sidebar-entries {
+  li {
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}

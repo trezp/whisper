@@ -1,9 +1,12 @@
-extends index
+extends layout
 
 block content
 
-  div(class="main")
-    form(method="post" id="main" action="/add")
+  div(class="main-single-entry")
+    h6
+      a(href="/")
+        |  <i class="material-icons">assignment_return</i> <span>Back</span>
+    form(method="post" class="add-form form" action="/add")
       label(for="author") Author
         input(type="text" name="author")
       label(for="title") Title

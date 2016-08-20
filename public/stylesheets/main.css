@@ -1,14 +1,17 @@
+.material-icons {
+  vertical-align: middle;
+}
+
 body {
   background-color: #a20025;
   font-family: 'Hind Guntur', sans-serif;
 }
 
 a {
-  color: #000;
   text-decoration: none;
 }
 a:visited {
-  color: #000;
+  color: initial;
 }
 
 ul {
@@ -18,8 +21,31 @@ ul li {
   list-style-type: none;
 }
 
+ul.main-menu {
+  margin: auto;
+}
+ul.main-menu li {
+  height: 2em;
+  line-height: 2em;
+}
+ul.main-menu li a {
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+ul.main-menu li a:hover {
+  background-color: orange;
+}
+
+ul.sidebar-entries li a {
+  text-decoration: underline;
+}
+ul.sidebar-entries li a:hover {
+  color: orange;
+}
+
 .container {
-  background-color: white;
+  background-color: #FFF;
 }
 .container .sidebar, .container .main {
   padding: 2%;
@@ -38,24 +64,6 @@ ul li {
   display: block;
 }
 
-ul.main-menu {
-  margin: auto;
-}
-ul.main-menu li {
-  height: 2em;
-  line-height: 2em;
-  margin-bottom: 10px;
-}
-ul.main-menu li a {
-  display: block;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-ul.main-menu li a:hover {
-  background-color: orange;
-}
-
 .header {
   background-color: black;
   background-position: center;
@@ -72,7 +80,7 @@ ul.main-menu li a:hover {
   letter-spacing: 20px;
 }
 
-form {
+form .form {
   max-width: 80%;
 }
 form input, form textarea {
@@ -93,23 +101,25 @@ form label {
 
 .submit, .cancel, .delete, .edit {
   display: inline-block;
-  width: 150px;
   background: white;
-  border: 2px solid black;
-  border-radius: 4px;
-  padding: 5px;
-  padding-top: 8px;
+  border-style: none;
   margin-right: 5px;
   margin-top: 5px;
   text-align: center;
   font-weight: bold;
 }
 .submit:hover, .cancel:hover, .delete:hover, .edit:hover {
-  color: white;
-  background-color: black;
+  color: #a20025;
 }
 .submit:visited, .cancel:visited, .delete:visited, .edit:visited {
-  color: #000;
+  color: #fff;
+}
+.submit a, .cancel a, .delete a, .edit a {
+  color: initial;
+  display: block;
+}
+.submit a:hover, .cancel a:hover, .delete a:hover, .edit a:hover {
+  color: #FFF;
 }
 
 .entries {
@@ -119,23 +129,50 @@ form label {
   border-radius: 4px;
   margin-bottom: 15px;
 }
-.entries a {
-  color: #a20025;
+.entries a, .entries button, .entries .edit {
+  color: #000;
 }
-.entries a:visited {
+.entries a:hover, .entries button:hover, .entries .edit:hover {
   color: #a20025;
-}
-.entries a:hover {
-  color: orange;
 }
 .entries h2 {
   font-size: 1.8em;
   margin: .6em;
   margin-left: 0;
+}
+.entries h2 a {
   color: #a20025;
 }
 .entries h6 {
   margin: 0;
+}
+
+.main-single-entry {
+  max-width: 80%;
+  margin: auto;
+}
+.main-single-entry h6 {
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+.main-single-entry button {
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: 5px;
+}
+.main-single-entry button:hover {
+  background-color: #FFF;
+  color: #000;
+}
+.main-single-entry button:hover a {
+  color: #000;
+}
+.main-single-entry button:hover {
+  background-color: #000;
+  color: #FFF;
+}
+.main-single-entry button a:hover {
+  color: #fff;
 }
 
 ul.options {
@@ -143,14 +180,6 @@ ul.options {
 }
 ul.options li {
   display: inline-block;
-}
-ul.options li a:hover {
-  color: #FFF;
-}
-
-.main-single-entry {
-  max-width: 80%;
-  margin: auto;
 }
 
 /*# sourceMappingURL=main.css.map */

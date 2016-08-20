@@ -1,26 +1,39 @@
 $theme-color: #a20025;
 $secondary-color: orange;
 
+.material-icons {
+  vertical-align: middle;
+}
+
 @mixin global-button {
   display: inline-block;
-  width: 150px;
   background: white;
-  border: 2px solid black;
-  border-radius: 4px;
-  padding: 5px;
-  padding-top: 8px;
+  border-style: none;
   margin-right: 5px;
   margin-top: 5px;
   text-align: center;
   font-weight: bold;
 
   &:hover {
-    color: white;
-    background-color: black;
+    color: $theme-color;
   }
 
   &:visited {
+    color: #fff;
+  }
+}
+
+@mixin single-entry-global-btn {
+  border: 1px solid #000;
+  border-radius: 3px;
+
+  &:hover {
+    background-color: #FFF;
     color: #000;
+
+    a {
+      color: #000;
+    }
   }
 }
 
@@ -30,11 +43,10 @@ body {
 }
 
 a {
-  color: #000;
   text-decoration: none;
 
   &:visited {
-    color: #000;
+    color: initial;
   }
 }
 ul {
