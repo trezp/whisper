@@ -5,17 +5,16 @@ var router = express.Router();
 var Entry = require("../models/entry").Entry;
 var ObjectId = require('mongodb').ObjectID;
 
-
-
 //GET /
 router.get('/', function(req,res,next){
     Entry.count({}, function(err, count){
       Entry.find({}, null, function(err, entries){
         if(err) return next(err);
       })
-      .sort('-date').exec(function(err, entries){
+      .sort('date').exec(function(err, entries){
         if (count > 0){
-          res.render('index', {title: 'Entries', entries:entries});
+          console.log(entries)
+          res.render('index', {title: 'Entries', 'entries':entries});
         } else {
           res.send("Sorry, there aren't any posts!");
         }
@@ -31,7 +30,7 @@ router.get('/oldest-newest', function(req,res,next){
       })
       .sort('date').exec(function(err, entries){
         if (count > 0){
-          res.render('index', {title: 'Entries', entries:entries});
+          res.render('index', {title: 'Entries', 'entries':entries});
         } else {
           res.send("Sorry, there aren't any posts!");
         }
@@ -39,12 +38,12 @@ router.get('/oldest-newest', function(req,res,next){
     });
 });
 
-
 //GET entry/:id
 router.get('/entry/:id', function(req, res, next){
   Entry.findOne({_id: ObjectId(req.params.id)}, function(err, entry){
     if(err) return next(err);
-    res.render('entry', {title: req.params.entryTitle, entry:entry});
+    console.log(entry.entryTitle)
+    res.render('entry', {title: req.params.entryTitle, 'entry':entry});
   });
 });
 
@@ -59,7 +58,7 @@ router.post('/entry/:id/delete', function(req, res, next){
 router.get('/entry/:id/edit', function(req, res, next){
   Entry.findOne({_id: ObjectId(req.params.id)}, function(err, entry){
     if(err) return next(err);
-      res.render('update-entry', {title: req.params.entryTitle, entry:entry});
+      res.render('update-entry', {title: req.params.entryTitle, 'entry':entry});
   });
 });
 

@@ -1,0 +1,45 @@
+$theme-color: #a20025;
+$secondary-color: orange;
+
+@mixin global-button {
+  display: inline-block;
+  width: 150px;
+  background: white;
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 5px;
+  padding-top: 8px;
+  margin-right: 5px;
+  margin-top: 5px;
+  text-align: center;
+  font-weight: bold;
+
+  &:hover {
+    color: white;
+    background-color: black;
+  }
+
+  &:visited {
+    color: #000;
+  }
+}
+
+body {
+  background-color: $theme-color;
+  font-family: 'Hind Guntur', sans-serif;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+
+  &:visited {
+    color: #000;
+  }
+}
+ul {
+  padding-left: 0;
+  li {
+    list-style-type: none;
+  }
+}

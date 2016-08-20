@@ -1,12 +1,15 @@
-extends layout
+extends index
 
 block content
 
-  form(method="post" id="main" action="/add")
-    label(for="author") Author
-      input(type="text" name="author")
-    label(for="title") Title
-      input(type="text" name="entryTitle")
-    label(for="message") Entry
-      textarea(type="text" name="entryBody")
-    button(type="submit" class="submit") Submit
+  div(class="main")
+    form(method="post" id="main" action="/add")
+      label(for="author") Author
+        input(type="text" name="author")
+      label(for="title") Title
+        input(type="text" name="entryTitle")
+      label(for="message") Entry
+        textarea(type="text" name="entryBody")
+      button(type="submit" class="submit") Submit
+      button(class="cancel")
+        a(href="/") Cancel

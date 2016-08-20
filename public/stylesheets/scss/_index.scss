@@ -1,0 +1,62 @@
+//structure
+.container {
+  background-color: white;
+
+  .sidebar, .main {
+    padding: 2%;
+  }
+
+  .sidebar {
+    width: 15%;
+    display: block;
+    float: left;
+
+    h2 {
+      font-size: 1.3em;
+    }
+  }
+  .main {
+    width: 77%;
+    float: right;
+    display: block;
+  }
+}
+
+ul.main-menu {
+  margin: auto;
+  li {
+    height: 2em;
+    line-height: 2em;
+    margin-bottom: 10px;
+
+    a {
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      &:hover {
+        background-color: orange;
+      }
+    }
+  }
+}
+
+//header
+.header {
+  //background-image: url('../images/abstract.jpg');
+  background-color: black;
+  background-position: center;
+  padding-left: 2%;
+  background-size: cover;
+  height: 40vh;
+
+  h1 {
+    color: white;
+    line-height: 40vh;
+    margin: 0 auto;
+    font-size: 6em;
+    text-align: center;
+    letter-spacing: 20px;
+  }
+}

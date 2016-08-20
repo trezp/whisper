@@ -1,4 +1,5 @@
 
+$('.sidebar').load('/sidebar.jade');
 $(document).ready(function(){
 
   $('.destroy').on('submit', function(event){
@@ -14,9 +15,9 @@ $(document).ready(function(){
       $(this).text(function(){
         return $(this).text().substr(0, desiredPostLength) + "...";
       });
-
     }
   });
+
 
 
 });

@@ -1,0 +1,13 @@
+
+
+ul(class="main-menu")
+  li
+    a(href="/add") New Entry
+  li
+    a(href="/") View All
+
+h3 Recent Posts
+each entry in entries
+  ul
+    li
+      a(href="/entry/#{entry._id}") #{entry.entryTitle}

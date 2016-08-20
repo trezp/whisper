@@ -1,0 +1,22 @@
+form {
+  max-width: 80%;
+  input, textarea {
+    white-space: pre;
+    border-style: none;
+    width: 100%;
+    line-height: 2em;
+    border: solid 1px black;
+    border-radius: 3px;
+    padding: 5px;
+  }
+  label {
+    font-size: 1.1em;
+    display: block;
+    padding: 2% 0 1% 0;
+    font-weight: bold;
+  }
+}
+
+.submit, .cancel, .delete, .edit {
+  @include global-button;
+}

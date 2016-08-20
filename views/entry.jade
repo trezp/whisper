@@ -1,19 +1,20 @@
 extends layout
 
 block content
-  h6
-    a(href="/") <- Back
-  div(class="entries")
-    h2 #{entry.entryTitle}
-    h3 By #{entry.author}
-    h6 #{entry.date}
-    p #{entry.entryBody}
+  div(class="main-single-entry")
+    h6
+      a(href="/") <- Back
+    div(class="entries")
+      h2 #{entry.entryTitle}
+      h3 By #{entry.author}
+      h6 #{entry.date}
+      p #{entry.entryBody}
 
-    ul.options
-      li
-        button(class="edit")
-          a(href='/entry/#{entry._id}/edit') Edit
-      li
-        form(action='/entry/#{entry._id}/delete',method='post' class="destroy")
-          input(type="hidden" name="_method" value="delete")
-          button(class="submit" type='submit') Delete
+      ul.options
+        li
+          button(class="edit")
+            a(href='/entry/#{entry._id}/edit') Edit
+        li
+          form(action='/entry/#{entry._id}/delete',method='post' class="destroy")
+            input(type="hidden" name="_method" value="delete")
+            button(class="submit" type='submit') Delete
