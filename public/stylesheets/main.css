@@ -1,5 +1,6 @@
 body {
   background-color: #a20025;
+  font-family: 'Hind Guntur', sans-serif;
 }
 
 ul {
@@ -44,12 +45,14 @@ form label {
   display: inline-block;
   width: 150px;
   background: white;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 4px;
   padding: 5px;
+  padding-top: 8px;
   margin-right: 5px;
   margin-top: 5px;
   text-align: center;
+  font-weight: bold;
 }
 .submit:hover, .cancel:hover, .delete:hover, .edit:hover {
   color: white;
@@ -90,6 +93,8 @@ ul.main-menu li {
 ul.main-menu li a {
   display: block;
   text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 ul.main-menu li a:hover {
   background-color: orange;
@@ -114,7 +119,7 @@ ul.main-menu li a:hover {
 .entries {
   background-color: white;
   padding: 15px;
-  border: 1px solid black;
+  border: 3px solid black;
   border-radius: 4px;
   margin-bottom: 15px;
 }
@@ -122,8 +127,6 @@ ul.main-menu li a:hover {
   font-size: 1.8em;
   margin: .6em;
   margin-left: 0;
-}
-.entries h3 {
   color: #a20025;
 }
 .entries h6 {

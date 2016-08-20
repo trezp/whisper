@@ -7,13 +7,15 @@ block content
       h6 #{entry.date}
       h2 #{entry.entryTitle}
       h3 By #{entry.author}
-      p #{entry.entryBody}
+      p(class="entry-body") #{entry.entryBody}
+          a(href="/entry/#{entry._id}") Read More
+
 
       ul.options
         //- li
         //-   a(class=" " href='/entry/#{entry._id}' id='readmore') Read More
         li
-          a(class="edit" href='/entry/#{entry._id}/edit') Edit
+          button(class="edit" href='/entry/#{entry._id}/edit') Edit
         li
           form(action='/entry/#{entry._id}/delete',method='post' class="destroy")
             input(type="hidden" name="_method" value="delete")
