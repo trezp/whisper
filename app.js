@@ -5,9 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var session = require('express-session');
+var MongoStore = require('connect-mongo')(session);
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
 
 var app = express();
 
@@ -37,7 +37,25 @@ db.once("open", function(){
 	console.log("db connection successful");
 });
 
+app.use(session({
+	secret: "my socks are red",
+	resave: false,
+	saveUninitialized: false,
+	store: new MongoStore({
+		mongooseConnection: db
+	})
+}));
 
+app.use(function(req, res, next){
+	res.locals.currentUser = req.session.userId;
+	next();
+});
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+var routes = require('./routes/index');
+var users = require('./routes/users');
 app.use('/', routes);
 app.use('/users', users);
 
@@ -72,6 +90,18 @@ app.use(function(err, req, res, next) {
   });
 });
 
+
+// TODO: Find optimal way to organize routes
+// TODO: Organize views folder
+// TODO: Make landing page
+// TODO: Entries only viewable by logged in user
+// TODO: Show logged in status on every page
+// TODO: Entries are attached to a user
+// TODO: User can only edit own entries
+// TODO: User can view only their entries
+// TODO: View entries by user
+// TODO: Find word processing plugin
+// TODO: User profile page
 
 
 module.exports = app;

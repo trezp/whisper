@@ -25,6 +25,10 @@ ul.sidebar-entries {
       &:hover {
         color: $secondary-color;
       }
+
+      &:visited {
+        color: #000;
+      }
     }
   }
 }

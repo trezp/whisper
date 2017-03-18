@@ -43,6 +43,9 @@ ul.sidebar-entries li a {
 ul.sidebar-entries li a:hover {
   color: orange;
 }
+ul.sidebar-entries li a:visited {
+  color: #000;
+}
 
 .container {
   background-color: #FFF;
@@ -62,6 +65,9 @@ ul.sidebar-entries li a:hover {
   width: 77%;
   float: right;
   display: block;
+}
+.container .main .no-posts {
+  color: #fff;
 }
 
 .header {
