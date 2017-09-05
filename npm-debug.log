@@ -7,7 +7,7 @@
 6 silly lifecycle whisper@0.0.0~prestart: no script for prestart, continuing
 7 info lifecycle whisper@0.0.0~start: whisper@0.0.0
 8 verbose lifecycle whisper@0.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle whisper@0.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/treasureporth/Desktop/proj/whisper/whisper/node_modules/.bin:/Users/treasureporth/.rvm/gems/ruby-2.2.1/bin:/Users/treasureporth/.rvm/gems/ruby-2.2.1@global/bin:/Users/treasureporth/.rvm/rubies/ruby-2.2.1/bin:/Users/treasureporth/.rbenv/shims:/Users/treasureporth/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Users/treasureporth/.rvm/bin
+9 verbose lifecycle whisper@0.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/treasureporth/Desktop/proj/whisper/whisper/node_modules/.bin:/Users/treasureporth/.rvm/gems/ruby-2.2.1/bin:/Users/treasureporth/.rvm/gems/ruby-2.2.1@global/bin:/Users/treasureporth/.rvm/rubies/ruby-2.2.1/bin:/Users/treasureporth/.rbenv/shims:/Users/treasureporth/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/treasureporth/.rvm/bin
 10 verbose lifecycle whisper@0.0.0~start: CWD: /Users/treasureporth/Desktop/proj/whisper/whisper
 11 silly lifecycle whisper@0.0.0~start: Args: [ '-c', 'node ./bin/www' ]
 12 silly lifecycle whisper@0.0.0~start: Returned: code: 1  signal: null

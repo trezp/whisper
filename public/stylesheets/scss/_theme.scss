@@ -1,8 +1,9 @@
-$theme-color: #a20025;
-$secondary-color: orange;
+$theme-color: #8A8486;
+$secondary-color: #0F78A3;
 
 .material-icons {
   vertical-align: middle;
+  font-size: 1em;
 }
 
 @mixin global-button {

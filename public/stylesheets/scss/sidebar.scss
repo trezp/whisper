@@ -4,6 +4,7 @@ ul.main-menu {
   li {
     height: 2em;
     line-height: 2em;
+    padding: 2px;
 
     a {
       display: block;
@@ -11,7 +12,9 @@ ul.main-menu {
       font-weight: bold;
 
       &:hover {
-        background-color: orange;
+        background-color: $secondary-color;
+        color: white;
+        border-radius: 2px;
       }
     }
   }
@@ -20,14 +23,13 @@ ul.main-menu {
 ul.sidebar-entries {
   li {
     a {
-      text-decoration: underline;
-
+      padding-bottom: .5em;
+      padding-left: 0;
+      color: $secondary-color;
+      font-weight: bold;
+      display: block;
       &:hover {
-        color: $secondary-color;
-      }
-
-      &:visited {
-        color: #000;
+        color: lighten($secondary-color, 15%);
       }
     }
   }

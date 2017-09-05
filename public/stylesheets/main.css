@@ -1,9 +1,10 @@
 .material-icons {
   vertical-align: middle;
+  font-size: 1em;
 }
 
 body {
-  background-color: #a20025;
+  background-color: #8A8486;
   font-family: 'Hind Guntur', sans-serif;
 }
 
@@ -27,6 +28,7 @@ ul.main-menu {
 ul.main-menu li {
   height: 2em;
   line-height: 2em;
+  padding: 2px;
 }
 ul.main-menu li a {
   display: block;
@@ -34,17 +36,20 @@ ul.main-menu li a {
   font-weight: bold;
 }
 ul.main-menu li a:hover {
-  background-color: orange;
+  background-color: #0F78A3;
+  color: white;
+  border-radius: 2px;
 }
 
 ul.sidebar-entries li a {
-  text-decoration: underline;
+  padding-bottom: .5em;
+  padding-left: 0;
+  color: #0F78A3;
+  font-weight: bold;
+  display: block;
 }
 ul.sidebar-entries li a:hover {
-  color: orange;
-}
-ul.sidebar-entries li a:visited {
-  color: #000;
+  color: #15ace9;
 }
 
 .container {
@@ -71,6 +76,7 @@ ul.sidebar-entries li a:visited {
 }
 
 .header {
+  background-image: url("../images/cityscape.jpg");
   background-color: black;
   background-position: center;
   padding-left: 2%;
@@ -82,8 +88,7 @@ ul.sidebar-entries li a:visited {
   line-height: 40vh;
   margin: 0 auto;
   font-size: 6em;
-  text-align: center;
-  letter-spacing: 20px;
+  letter-spacing: -10px;
 }
 
 form .form {
@@ -115,7 +120,7 @@ form label {
   font-weight: bold;
 }
 .submit:hover, .cancel:hover, .delete:hover, .edit:hover {
-  color: #a20025;
+  color: #8A8486;
 }
 .submit:visited, .cancel:visited, .delete:visited, .edit:visited {
   color: #fff;
@@ -131,7 +136,7 @@ form label {
 .entries {
   background-color: white;
   padding: 15px;
-  border: 3px solid black;
+  border: 2px solid black;
   border-radius: 4px;
   margin-bottom: 15px;
 }
@@ -139,7 +144,7 @@ form label {
   color: #000;
 }
 .entries a:hover, .entries button:hover, .entries .edit:hover {
-  color: #a20025;
+  color: #8A8486;
 }
 .entries h2 {
   font-size: 1.8em;
@@ -147,7 +152,7 @@ form label {
   margin-left: 0;
 }
 .entries h2 a {
-  color: #a20025;
+  color: #8A8486;
 }
 .entries h6 {
   margin: 0;
